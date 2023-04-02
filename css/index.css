@@ -29,15 +29,11 @@ color:white;
 border: none;
 outline: none;
 z-index: 1;
-
 width:300px;
 
 }
 
-.butripple{
-	overflow: hidden;
 
-}
 
 .buthover{
 	overflow: hidden;
@@ -55,36 +51,49 @@ width:300px;
 	z-index:-1 ;
 	transition: .5s;
 }
-.but:hover .mob{
+.buthover:hover .mob{
 	transform: translateX(0%);
 }
 
-/* :root{
-  --mainleft:50%;
-  --maintop:50%
+/* ************************************ */
 
-} */
+.butripple{
+	overflow: hidden;
+
+}
 .mobripp{
-	width: 0;
-	height:0;
+
 	border-radius: 50%;
 	position: absolute;
-	top:50%;
-	left: 50%;
+
 	transform: translate(-50%,-50%);
 	background-color: red;
 	
 	z-index:-1 ;
 	transition: .5s;
 
+  animation: bubble 1s linear;
 }
 	
-.but:hover .mobripp{
-	width:800px;
-	height:800px;
+/* .mobripp.active{
+width: 50px;
+height: 50px;
+transition: 1s;
+} */
+
+
+
+@keyframes bubble {
+  0%{
+    width: 0;
+    height:0;
+  }
+  100%{
+    width: 800px;
+    height:800px;
+  }
+
 }
-
-
 h1{
 
 	font-size: 3rem;
